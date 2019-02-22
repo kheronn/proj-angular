@@ -7,10 +7,19 @@ import { LocalStorageService } from 'angular-2-local-storage';
 })
 export class ContatoService {
 
-  constructor(private localStorage : LocalStorageService) { }
+  constructor(private localStorage: LocalStorageService) { }
 
 
-  save(contato : Contato){
+  save(contato: Contato) {
     this.localStorage.set(contato.id, contato);
   }
+
+  getContato(id:string): Contato{
+    return this.localStorage.get(id);
+  }
+
+  getAll(): Contato[]{
+    return this.localStorage.keys().map(id => this.getContato(id));
+  }
+ 
 }

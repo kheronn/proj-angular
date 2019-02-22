@@ -1,0 +1,12 @@
+<table class="table table-striped">
+
+  <tr class="table-primary">
+    <th>Nome</th>
+    <th>Telefone</th>
+  </tr>
+
+  <tr *ngFor="let contato of contatos">
+    <td>{{contato.nome}}</td>
+    <td>{{contato.telefone}}</td>
+  </tr>
+</table>
