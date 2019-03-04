@@ -3,10 +3,15 @@
   <tr class="table-primary">
     <th>Nome</th>
     <th>Telefone</th>
+    <th>Ação</th>
   </tr>
 
   <tr *ngFor="let contato of contatos">
     <td>{{contato.nome}}</td>
     <td>{{contato.telefone}}</td>
+    <td>
+      <button class="btn btn-success" (click)="edit(contato)">Alterar</button>
+      <button class="btn btn-danger" (click)="delete(contato)">Excluir</button>
+    </td>
   </tr>
 </table>
