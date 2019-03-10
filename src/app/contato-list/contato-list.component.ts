@@ -18,13 +18,14 @@ export class ContatoListComponent implements OnInit {
 
   }
 
-  edit(contato: Contato) {
+  edit(contato:Contato){
     this.editContato.emit(contato)
   }
-  
-  delete(contato: Contato) {
+
+  delete(contato:Contato){
     this.deleteContato.emit(contato)
   }
+  
 
 
 

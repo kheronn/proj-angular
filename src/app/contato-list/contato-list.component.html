@@ -3,15 +3,19 @@
   <tr class="table-primary">
     <th>Nome</th>
     <th>Telefone</th>
-    <th>Ação</th>
+    <th>Ações</th>
   </tr>
 
   <tr *ngFor="let contato of contatos">
     <td>{{contato.nome}}</td>
     <td>{{contato.telefone}}</td>
     <td>
-      <button class="btn btn-success" (click)="edit(contato)">Alterar</button>
-      <button class="btn btn-danger" (click)="delete(contato)">Excluir</button>
+      <button class="btn btn-primary" (click)="edit(contato)">
+        <i class="fas fa-edit"></i>
+      </button>
+      <button class="btn btn-danger" (click)="delete(contato)">
+        <i class="far fa-trash-alt"></i>
+      </button>
     </td>
   </tr>
 </table>

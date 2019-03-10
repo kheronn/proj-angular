@@ -1,10 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-5">
-      <app-contato-form [contato]="contato" (saveContato)="saveContato($event)" ></app-contato-form>
+      <app-contato-form [contato]="contato" (saveContato)="saveContato($event)"></app-contato-form>
     </div>
     <div class="col-md-7">
-      <app-contato-list [contatos]="contatos" (deleteContato)="deleteContato($event)" (editContato)="editContato($event)"></app-contato-list>
+      <app-contato-list [contatos]="contatos" (editContato)="edit($event)" (deleteContato)="delete($event)">
+      </app-contato-list>
     </div>
   </div>
 </div>

@@ -1,5 +1,6 @@
 <h1 class="display-4">Contato</h1>
-<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+<form #form="ngForm" autocomplete="off"  (submit)="onSubmit(form)">
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="contato.id">
   <div class="form-group">
     <input name="nome" #nome="ngModel" [(ngModel)]="contato.nome" class="form-control" placeholder="Nome" required>
     <div *ngIf="nome.invalid && nome.touched" class="validation-error">This field is required.</div>
