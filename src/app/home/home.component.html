@@ -3,7 +3,7 @@
     <div class="col-md-5">
       <app-contato-form [contato]="contato" (saveContato)="saveContato($event)"></app-contato-form>
     </div>
-    <div class="col-md-7">
+    <div class="col-md-7" style="margin-top: 10px">
       <app-contato-list [contatos]="contatos" (editContato)="edit($event)" (deleteContato)="delete($event)">
       </app-contato-list>
     </div>
